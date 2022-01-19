@@ -29,6 +29,9 @@ class Botas(override var parte: String,override var material: String,override va
         println("Protege los pies")
     }
 }
+/*Es herencia de extensión, ya que cada animal realiza algo distinto, por ejemplo un pajaro puede volar pero un perro no
+pero aún así ambos son seres vivos
+ */
 //La clase serVivo es una superclase
 abstract class serVivo(open var animal:String,open var raza:String,open var numextremidad:Int){
     abstract fun alimentación()
@@ -44,7 +47,7 @@ class Perro(override var animal: String,override var raza: String,override var n
     }
 }
 //La clase Pájaro es una subclase
-class Pájaro(override var animal: String,override var raza: String,override var numextremidad: Int):serVivo(animal,raza, numextremidad){
+class Pajaro(override var animal: String,override var raza: String,override var numextremidad: Int):serVivo(animal,raza, numextremidad){
     override fun alimentación() {
         println("El pájaro esta picoteando el pisto")
     }
@@ -71,10 +74,10 @@ var Perro1:Perro = Perro("Perro","Husky",4)
     println("Paco,¿Que hace el perro?")
 Perro1.alimentación()
 Perro1.ladrar()
-var Pájaro1:Pájaro = Pájaro("Pájaro","Colibri",4)
+var Pajaro1:Pajaro = Pajaro("Pájaro","Colibri",4)
     println("Paco,¿Que hace el pájaro?")
-Pájaro1.alimentación()
-Pájaro1.volar()
+Pajaro1.alimentación()
+Pajaro1.volar()
 }
 
 /* E)
